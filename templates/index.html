@@ -1,0 +1,33 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Radio</title>
+  </head>
+
+  <meta name='viewport' content='width=device-width' />
+    
+  <body>
+    <ul>
+      {% if RADIO %}
+        {% for station in RADIO %}
+        <li><a href="?action=play&playlist={{ station.name }}">{{ station.display_name }}</a></li>
+        {% endfor %}
+      {% endif %}
+      <hr/>
+      {% if BARNA %}  
+        {% for album in BARNA %}
+        <li><a href="?action=play&playlist={{ album.name }}">{{ album.display_name }}</a></li>
+        {% endfor %}
+      {% endif %}
+      <hr/>
+      <li><a href="?action=stop">Slå av</a>
+        - <a href="?action=dec_vol">Volum -</a>
+        - <a href="?action=inc_vol">Volum +</a>
+      </li>
+    </ul>    
+  </body>
+</html>
