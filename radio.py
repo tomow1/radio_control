@@ -36,10 +36,15 @@ def init_db():
         with app.open_resource('schema.sql', mode='r') as f:
             db.cursor().executescript(f.read())
         db.commit()
+        sql = 'insert into stations (display_name, name) values (?,?)'
         for station in RADIO:
-            db.execute('insert into stations (display_name, name) values (?,?)',
-                       [station["display_name"], station["name"]])
+            db.execute(sql, [station["display_name"], station["name"]])
             db.commit()
+        sql = 'select display_name, name from stations order by display_name'
+        cur = db.execute(sql)
+        result = cur.fetchall()
+        print "stations table created"
+        print str(len(result)) + ' rows added'
 
 
 @app.route('/', methods=['GET'])
