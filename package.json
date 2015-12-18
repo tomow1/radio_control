@@ -1,0 +1,23 @@
+{
+  "name": "radio_control",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Control radio streams for MPD",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-flatten": "^0.2.0",
+    "gulp-sass": "^2.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomow1/radio_control.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/tomow1/radio_control/issues"
+  },
+  "homepage": "https://github.com/tomow1/radio_control#readme"
+}

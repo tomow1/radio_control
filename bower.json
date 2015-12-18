@@ -1,0 +1,22 @@
+{
+  "name": "radio_control",
+  "description": "Control radio streams for MPD",
+  "main": "",
+  "authors": [
+    "tomow1 <tomow1@users.noreply.github.com>"
+  ],
+  "license": "BSD-2-Clause",
+  "homepage": "https://github.com/tomow1/radio_control",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.6"
+  }
+}

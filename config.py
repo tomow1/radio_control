@@ -8,6 +8,6 @@ RADIO=[{"display_name":"MDR Info","name":"mdr_info"},
        {"display_name":"NRK Super","name":"nrk_super"},
        {"display_name":"Radio Top 40","name":"radio_top40"}]
 BARNA=[{"display_name":"Der Tramzauberbaum 1","name":"tzb1"}]
-MPD_SRV={"host":"musica.local",
+MPD_SRV={"host":"localhost",
          "port":6600,
          "passwd":"hubhub"}

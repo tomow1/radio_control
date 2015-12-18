@@ -1,2 +1,5 @@
 *.pyc
 *.db
+bower_components
+env
+node_modules

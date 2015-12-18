@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<title>Radio Control</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/app.css') }}">
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}" charset="utf-8"></script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Radio Control</a>
+    </div>
+
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="btn-group" role="group">
+
+          <a href="index?action=stop" class="btn btn-default navbar-btn">
+            <span class="glyphicon glyphicon-volume-off mpdcontrols"></span>
+          </a>
+
+          <a href="index?action=dec_vol" class="btn btn-default navbar-btn">
+            <span class="glyphicon glyphicon-volume-down mpdcontrols"></span>
+          </a>
+
+          <a href="index?action=inc_vol" class="btn btn-default navbar-btn">
+            <span class="glyphicon glyphicon-volume-up mpdcontrols"></span>
+          </a>
+      </div>
+      <ul class="nav navbar-nav">
+        {% block navli %}{% endblock navli %}
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class=page>
+  <h1>Flaskr</h1>
+  {% for message in get_flashed_messages() %}
+    <div class=flash>{{ message }}</div>
+  {% endfor %}
+  {% block body %}{% endblock %}
+</div>
+
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" charset="utf-8"></script>
+</body>
+</html>

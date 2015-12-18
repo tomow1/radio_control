@@ -9,7 +9,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   </head>
 
   <meta name='viewport' content='width=device-width' />
-    
+
   <body>
     <ul>
       {% if RADIO %}
@@ -21,8 +21,9 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
           </li>
         {% endfor %}
       {% endif %}
+      <a href="{{ url_for('add_station_form') }}">Add New Station</a>
       <hr/>
-      {% if BARNA %}  
+      {% if BARNA %}
         {% for album in BARNA %}
           <li>
             <a href="?action=play&playlist={{ album.name }}">
@@ -37,6 +38,6 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         <a href="?action=dec_vol">Volum -</a> -
         <a href="?action=inc_vol">Volum +</a>
       </li>
-    </ul>    
+    </ul>
   </body>
 </html>

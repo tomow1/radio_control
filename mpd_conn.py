@@ -8,7 +8,7 @@ volume = 76
 def conn(func):
     def wrapper(*args):
         srv.connect(MPD_SRV['host'], MPD_SRV['port'])
-        srv.password(MPD_SRV['passwd'])
+        # srv.password(MPD_SRV['passwd'])
         func(*args)
         srv.disconnect()
 
